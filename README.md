@@ -1,8 +1,12 @@
 <div align="center">
 
-# ECG-RSI: Towards Recursive Self-Improvement<br>via Feedback-Driven Data Synthesis
+# ECG-RSI: Recursive Self-Improvement<br>through Targeted ECG Waveform Evolution
 
-**Anonymous Author(s)**
+Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, Lijun Wu
+
+Zhejiang University · Ant Group · Shanghai Artificial Intelligence Laboratory · Shanghai Jiao Tong University
+
+**Updated 9 October 2026** · 32-page manuscript
 
 [**Paper (PDF)**](ecg-rsi.pdf) · [**Project Website**](https://pork-pay.github.io/ECG-RSI/) · [**LaTeX / Overleaf Source**](ECG_RSI_arXiv.zip)
 
@@ -14,7 +18,9 @@ ECG-RSI connects targeted ECG instruction-data synthesis with feedback-driven mo
 
 Two feedback loops connect this data engine to learning: **construction feedback** guides operator and prompt repair, while **learner feedback** specifies which capabilities, difficulty levels, and evidence representations to construct next. Target attainment and non-target preservation jointly constrain data acceptance.
 
-![ECG-RSI framework](method.png)
+![ECG-RSI framework](method.svg)
+
+The current manuscript reports mean gains of **21.47 percentage points in QA accuracy** and **9.77 points in classification F1** across R0–R3.
 
 ## Highlights
 
@@ -78,8 +84,8 @@ This repository currently contains the manuscript and project-page materials. Tr
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000/. To compile the manuscript, unzip `ECG_RSI_arXiv.zip` and use `main.tex` with pdfLaTeX.
+Open http://localhost:8000/. To compile the manuscript, unzip `ECG_RSI_arXiv.zip`, enter `ECG_RSI_arXiv`, and run `latexmk -pdf main.tex` (pdfLaTeX and BibTeX). The source package includes the current bibliography style and generated `main.bbl`. References follow the main text and precede the appendix.
 
 ## Citation
 
-The manuscript currently uses anonymous authorship. Author metadata and an arXiv identifier can be added when the public citation is finalized.
+Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, and Lijun Wu. **ECG-RSI: Recursive Self-Improvement through Targeted ECG Waveform Evolution.** 2026. [Manuscript](ecg-rsi.pdf).
