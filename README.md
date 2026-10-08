@@ -91,3 +91,5 @@ Open http://localhost:8000/. To compile the manuscript, unzip `ECG_RSI_arXiv.zip
 Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, and Lijun Wu. **ECG-RSI: Recursive Self-Improvement through Targeted ECG Waveform Evolution.** 2026. [Manuscript](ecg-rsi.pdf).
 
 Layout revision (9 October 2026): Table 9 is a narrow right-wrapped table. Pagination and case-study figure placement were adjusted to remove large page-bottom gaps; the complete manuscript is 30 pages. References remain before the appendix.
+
+Cross-round insight: error diagnosis motivates candidate interventions, while candidate comparison selects the update. The retained A–B–B path is consistent with changing intervention utility, but learner state and recipe content vary together. Continued local correction yields diminishing external S7 gains, motivating transfer and regression checks.
