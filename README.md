@@ -6,7 +6,7 @@ Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin 
 
 Zhejiang University · Ant Group · Shanghai Artificial Intelligence Laboratory · Shanghai Jiao Tong University
 
-**Updated 9 October 2026** · 32-page manuscript
+**Updated 9 October 2026** · 30-page manuscript
 
 [**Paper (PDF)**](ecg-rsi.pdf) · [**Project Website**](https://pork-pay.github.io/ECG-RSI/) · [**LaTeX / Overleaf Source**](ECG_RSI_arXiv.zip)
 
@@ -89,3 +89,5 @@ Open http://localhost:8000/. To compile the manuscript, unzip `ECG_RSI_arXiv.zip
 ## Citation
 
 Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, and Lijun Wu. **ECG-RSI: Recursive Self-Improvement through Targeted ECG Waveform Evolution.** 2026. [Manuscript](ecg-rsi.pdf).
+
+Layout revision (9 October 2026): Table 9 is a narrow right-wrapped table. Pagination and case-study figure placement were adjusted to remove large page-bottom gaps; the complete manuscript is 30 pages. References remain before the appendix.
