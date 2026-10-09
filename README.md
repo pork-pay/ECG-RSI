@@ -6,7 +6,7 @@ Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin 
 
 Zhejiang University · Ant Group · Shanghai Artificial Intelligence Laboratory · Shanghai Jiao Tong University
 
-**Updated 9 October 2026** · 32-page manuscript
+**Updated 9 October 2026** · 30-page manuscript
 
 [**Paper (PDF)**](ecg-rsi.pdf) · [**Project Website**](https://pork-pay.github.io/ECG-RSI/) · [**LaTeX / Overleaf Source**](ECG_RSI_arXiv.zip)
 
