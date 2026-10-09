@@ -97,3 +97,5 @@ Cross-round insight: error diagnosis motivates candidate interventions, while ca
 The current revision removes the duplicated Figure 3 title, adds editorial emphasis to both complete case transcripts, and includes seven recent RSI papers verified against arXiv records (60 references in total).
 
 Recipe-selection clarification (9 October 2026): Section 3.3.2 explains how A changes category/task quotas, B builds confusion-focused options and explanations, and C reweights difficulty/task mixtures. Section 3.3.3 specifies matched same-parent training and selection on a separate development set. Figure 3 is schematic; Table 13 reports actual mixtures, scores, and retained branches.
+
+Appendix readability update (9 October 2026): purple topic headings, blue identifiers and key terms, and bold actions distinguish the method details, prompt fields, and case subsections. The wording, formulas, experimental values, and 32-page length are unchanged.
