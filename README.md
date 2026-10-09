@@ -6,7 +6,7 @@ Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin 
 
 Zhejiang University · Ant Group · Shanghai Artificial Intelligence Laboratory · Shanghai Jiao Tong University
 
-**Updated 9 October 2026** · 31-page manuscript
+**Updated 9 October 2026** · 32-page manuscript
 
 [**Paper (PDF)**](ecg-rsi.pdf) · [**Project Website**](https://pork-pay.github.io/ECG-RSI/) · [**LaTeX / Overleaf Source**](ECG_RSI_arXiv.zip)
 
@@ -90,8 +90,10 @@ Open http://localhost:8000/. To compile the manuscript, unzip `ECG_RSI_arXiv.zip
 
 Wang Xiaoliang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, and Lijun Wu. **ECG-RSI: Recursive Self-Improvement through Targeted ECG Waveform Evolution.** 2026. [Manuscript](ecg-rsi.pdf).
 
-Layout revision (9 October 2026): Table 9 is a narrow right-wrapped table. Pagination and case-study figure placement were adjusted to remove large page-bottom gaps; the complete manuscript is 31 pages. References remain before the appendix.
+Layout revision (9 October 2026): Table 9 is a narrow right-wrapped table. Pagination and case-study figure placement were adjusted to remove large page-bottom gaps; the complete manuscript is 32 pages. References remain before the appendix.
 
 Cross-round insight: error diagnosis motivates candidate interventions, while candidate comparison selects the update. The retained A–B–B path is consistent with changing intervention utility, but learner state and recipe content vary together. Continued local correction yields diminishing external S7 gains, motivating transfer and regression checks.
 
 The current revision removes the duplicated Figure 3 title, adds editorial emphasis to both complete case transcripts, and includes seven recent RSI papers verified against arXiv records (60 references in total).
+
+Recipe-selection clarification (9 October 2026): Section 3.3.2 explains how A changes category/task quotas, B builds confusion-focused options and explanations, and C reweights difficulty/task mixtures. Section 3.3.3 specifies matched same-parent training and selection on a separate development set. Figure 3 is schematic; Table 13 reports actual mixtures, scores, and retained branches.
