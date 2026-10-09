@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="714" height="524" viewBox="0 0 714 524" role="img" aria-labelledby="title desc">
+<title id="title">ECG-RSI heart and evolution logo</title>
+<desc id="desc">A solid dark-red heart replaces the wrench in a deep muted-purple evolution loop, with a dark-red ECG waveform at its center.</desc>
+<g id="evolution-loop" fill="#51406D">
+  <path id="upper-left-arrow" d="M215 125 C273 91 341 61 405 41 L381 17 Q371 4 388 7 L500 38 Q511 43 498 50 L408 108 Q393 117 400 100 L407 79 C341 99 280 126 222 157 Z"/>
+  <path id="upper-right-arc" d="M511 25 C604 18 657 53 687 92 C711 124 710 158 698 190 L662 190 C677 148 671 124 646 97 C613 64 564 54 512 59 L526 42 Z"/>
+  <path id="lower-left-arc" d="M18 315 C-2 363 -8 410 19 446 C51 487 107 502 171 502 L158 483 L169 469 C108 468 61 454 39 427 C17 400 24 359 47 315 Z"/>
+  <path id="lower-right-arrow" d="M271 422 Q284 414 280 430 L269 451 C380 422 478 375 560 323 L605 323 Q612 323 601 333 C505 410 386 461 255 487 L280 511 Q289 525 270 519 L185 489 Q176 486 187 479 Z"/>
+</g>
+<path id="heart" fill="#942B3B" d="M111 301 C94 283 18 230 18 181 C18 136 73 110 111 156 C149 110 204 136 204 181 C204 230 128 283 111 301 Z"/>
+<path id="ecg-wave" d="M212 258 H276 L297 231 L319 258 H349 L368 285 L400 166 L432 351 L466 258 H497 L520 229 L547 225 L573 258 H643" fill="none" stroke="#942B3B" stroke-width="15.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
