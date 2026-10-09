@@ -65,7 +65,7 @@ Target HR: 48 bpm. Remeasured HR: 47.9 bpm. The construction extends the TP segm
 
 ![Heart-rate slowing example](case-rate.png)
 
-These are examples under the paper’s automatic closed-loop measurement convention. The manuscript separately reports blinded physician review.
+These are examples under the paper’s automatic closed-loop measurement convention. The manuscript separately reports blinded review by experienced human practitioners.
 
 ## Available materials
 
