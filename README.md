@@ -4,12 +4,6 @@
 
 <h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
-<p>Xiaoliang&nbsp;Wang<sup>1,2*</sup>, Zhuo&nbsp;Chen<sup>2*</sup>, Chuanyang&nbsp;Zheng<sup>2</sup>, Jiangwei&nbsp;Lao<sup>2</sup>, Quanbin&nbsp;Wang<sup>2</sup>,<br>
-Honglin&nbsp;Lin<sup>3,4</sup>, Jiajia&nbsp;Liu<sup>2</sup>, Zhihong&nbsp;Lu<sup>2</sup>, Hao&nbsp;Jin<sup>1</sup>, Jian&nbsp;Wang<sup>2</sup>, Lijun&nbsp;Wu<sup>2,3†</sup></p>
-
-<p><sub><sup>1</sup>&nbsp;Zhejiang&nbsp;University &nbsp;·&nbsp; <sup>2</sup>&nbsp;Ant&nbsp;Group &nbsp;·&nbsp; <sup>3</sup>&nbsp;Shanghai&nbsp;Artificial&nbsp;Intelligence&nbsp;Laboratory &nbsp;·&nbsp; <sup>4</sup>&nbsp;Shanghai&nbsp;Jiao&nbsp;Tong&nbsp;University<br>
-<sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</sub></p>
-
 [![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](papers/ecg-rsi.pdf)
 [![Website](https://img.shields.io/badge/Website-ECG--RSI-625087.svg)](https://pork-pay.github.io/ECG-RSI/)
 [![GitHub stars](https://img.shields.io/github/stars/pork-pay/ECG-RSI?style=social)](https://github.com/pork-pay/ECG-RSI/stargazers)
