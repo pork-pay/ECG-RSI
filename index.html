@@ -74,36 +74,38 @@
 
   <section class="container evolution-section" id="evolution" aria-label="Animated ECG-RSI mechanism">
     <div class="evolution-demo" id="ecg-demo" data-step="5">
-      <div class="demo-heading"><div><p class="eyebrow">An evolving synthesis agent</p><h2 id="demo-title">Generate contrasting examples.</h2></div><span class="phase-count" id="phase-count">06 / 06</span></div>
+      <div class="demo-heading"><div><p class="eyebrow">ECG evidence → targeted supervision</p><h2 id="demo-title">Generate targeted ECG contrasts.</h2></div><div class="demo-phase"><span class="scene-kind">Schematic</span><span class="phase-count" id="phase-count">06 / 06</span></div></div>
       <div class="demo-network">
         <div class="signal-workbench">
           <svg id="signal-scene" viewBox="0 0 724 300" role="img" aria-labelledby="scene-title scene-desc">
             <title id="scene-title">ECG construction and next-generation supervision</title>
-            <desc id="scene-desc">An illustrative waveform edit extends PR. Construction feedback repairs drift in the protected R–R interval. Verified questions train a learner; its errors propose candidate recipes, and comparison on a separate selection set determines the retained recipe and next examples.</desc>
-            <defs><pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#e9eeef" stroke-width=".7"/></pattern><clipPath id="signal-clip"><rect x="12" y="36" width="696" height="235" rx="5"/></clipPath></defs>
+            <desc id="scene-desc">PR is measured from P onset to QRS onset. An illustrative edit lengthens PR, while construction feedback repairs R–R drift and preserves QRS morphology. Waveform-grounded answers train an ECG learner. Its errors propose three recipes from the same parent, and a separate selection set determines the retained learner and next examples.</desc>
+            <defs><pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#eddee2" stroke-width=".7"/></pattern><clipPath id="signal-clip"><rect x="12" y="36" width="696" height="235" rx="5"/></clipPath></defs>
             <g id="wave-comparison" class="wave-comparison">
               <rect x="12" y="36" width="696" height="235" fill="url(#ecg-grid)" rx="5"/>
-              <text class="scene-label" x="24" y="25">Source ECG</text>
-              <text class="scene-label edited-label" x="24" y="145">Edited ECG</text>
+              <text class="scene-label" x="24" y="25">Source</text>
+              <text class="scene-label edited-label" x="24" y="145">PR edit</text>
+              <g class="signal-landmarks" aria-label="P wave, QRS complex and T wave"><text x="106" y="62">P</text><text x="154" y="30">QRS</text><text x="215" y="53">T</text></g>
               <g class="alignment-guides"><path d="M154 38V254 M364 38V254 M574 38V254"/></g>
               <path class="reference-trace" id="source-wave" d="M22 92.00 L92.00 92.00 C98.00 92.00 97.00 80.00 106.00 78.00 C114.00 76.00 120.00 92.00 124.00 92.00 L142.00 92.00 L147.00 102.00 L154.00 44.00 L160.00 112.00 L167.00 92.00 L184.00 92.00 C198.00 92.00 201.00 70.00 215.00 68.00 C231.00 67.00 241.00 92.00 250.00 92.00 L302.00 92.00 C308.00 92.00 307.00 80.00 316.00 78.00 C324.00 76.00 330.00 92.00 334.00 92.00 L352.00 92.00 L357.00 102.00 L364.00 44.00 L370.00 112.00 L377.00 92.00 L394.00 92.00 C408.00 92.00 411.00 70.00 425.00 68.00 C441.00 67.00 451.00 92.00 460.00 92.00 L512.00 92.00 C518.00 92.00 517.00 80.00 526.00 78.00 C534.00 76.00 540.00 92.00 544.00 92.00 L562.00 92.00 L567.00 102.00 L574.00 44.00 L580.00 112.00 L587.00 92.00 L604.00 92.00 C618.00 92.00 621.00 70.00 635.00 68.00 C651.00 67.00 661.00 92.00 670.00 92.00"/>
               <path class="ghost-trace" d="M22 213.00 L92.00 213.00 C98.00 213.00 97.00 201.00 106.00 199.00 C114.00 197.00 120.00 213.00 124.00 213.00 L142.00 213.00 L147.00 223.00 L154.00 165.00 L160.00 233.00 L167.00 213.00 L184.00 213.00 C198.00 213.00 201.00 191.00 215.00 189.00 C231.00 188.00 241.00 213.00 250.00 213.00 L302.00 213.00 C308.00 213.00 307.00 201.00 316.00 199.00 C324.00 197.00 330.00 213.00 334.00 213.00 L352.00 213.00 L357.00 223.00 L364.00 165.00 L370.00 233.00 L377.00 213.00 L394.00 213.00 C408.00 213.00 411.00 191.00 425.00 189.00 C441.00 188.00 451.00 213.00 460.00 213.00 L512.00 213.00 C518.00 213.00 517.00 201.00 526.00 199.00 C534.00 197.00 540.00 213.00 544.00 213.00 L562.00 213.00 L567.00 223.00 L574.00 165.00 L580.00 233.00 L587.00 213.00 L604.00 213.00 C618.00 213.00 621.00 191.00 635.00 189.00 C651.00 188.00 661.00 213.00 670.00 213.00"/>
               <rect id="pr-region" class="pr-region" x="46" y="167" width="96" height="73" rx="3"/>
+              <g class="qrs-evidence"><rect x="139" y="161" width="31" height="80" rx="4"/><path d="M169 240h16"/><text x="192" y="247">QRS preserved</text></g>
               <g clip-path="url(#signal-clip)"><path class="edited-trace" id="edited-wave" d="M22 213.00 L46.00 213.00 C52.00 213.00 51.00 201.00 60.00 199.00 C68.00 197.00 74.00 213.00 78.00 213.00 L142.00 213.00 L147.00 223.00 L154.00 165.00 L160.00 233.00 L167.00 213.00 L184.00 213.00 C198.00 213.00 201.00 191.00 215.00 189.00 C231.00 188.00 241.00 213.00 250.00 213.00 L256.00 213.00 C262.00 213.00 261.00 201.00 270.00 199.00 C278.00 197.00 284.00 213.00 288.00 213.00 L352.00 213.00 L357.00 223.00 L364.00 165.00 L370.00 233.00 L377.00 213.00 L394.00 213.00 C408.00 213.00 411.00 191.00 425.00 189.00 C441.00 188.00 451.00 213.00 460.00 213.00 L466.00 213.00 C472.00 213.00 471.00 201.00 480.00 199.00 C488.00 197.00 494.00 213.00 498.00 213.00 L562.00 213.00 L567.00 223.00 L574.00 165.00 L580.00 233.00 L587.00 213.00 L604.00 213.00 C618.00 213.00 621.00 191.00 635.00 189.00 C651.00 188.00 661.00 213.00 670.00 213.00"/></g>
               <path id="pr-bracket" class="pr-bracket" d="M46 251v7H142v-7"/>
-              <text id="pr-label" class="interval-label" x="94" y="284">PR</text>
+              <text id="pr-label" class="interval-label" x="94" y="284">PR longer</text>
               <path id="rr-bracket" class="rr-bracket" d="M154 163v-9H364v9"/>
-              <text id="rr-label" class="rr-label" x="259" y="145">R–R fixed</text>
+              <text id="rr-label" class="rr-label" x="259" y="145">R–R preserved</text>
               <line id="scan-line" class="scan-line" x1="24" y1="165" x2="24" y2="246"/>
             </g>
             <g id="next-batch" class="next-batch">
-              <text class="scene-label" x="24" y="24">Next-round candidates</text>
+              <text class="scene-label" x="24" y="24">Next ECG lesson: PR contrasts</text>
               <g class="candidate-pair" id="candidate-0" transform="translate(16 43)">
       <rect class="candidate-frame" x="0" y="0" width="218" height="222" rx="9"/>
       <text class="candidate-label" x="15" y="25">Pair 1</text>
       <text class="trace-label" x="15" y="51">Reference</text>
       <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L302 0 C308 0 307 -12 316 -14 C324 -16 330 0 334 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L512 0 C518 0 517 -12 526 -14 C534 -16 540 0 544 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Contrast</text>
+      <text class="trace-label" x="15" y="145">Longer PR</text>
       <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L256 0 C262 0 261 -12 270 -14 C278 -16 284 0 288 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L466 0 C472 0 471 -12 480 -14 C488 -16 494 0 498 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 181) scale(.27 .56)"/>
     </g>
 <g class="candidate-pair" id="candidate-1" transform="translate(254 43)">
@@ -111,7 +113,7 @@
       <text class="candidate-label" x="15" y="25">Pair 2</text>
       <text class="trace-label" x="15" y="51">Reference</text>
       <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L322 0 C328 0 327 -12 336 -14 C344 -16 350 0 354 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L552 0 C558 0 557 -12 566 -14 C574 -16 580 0 584 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Contrast</text>
+      <text class="trace-label" x="15" y="145">Longer PR</text>
       <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L276 0 C282 0 281 -12 290 -14 C298 -16 304 0 308 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L506 0 C512 0 511 -12 520 -14 C528 -16 534 0 538 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 181) scale(.27 .56)"/>
     </g>
 <g class="candidate-pair" id="candidate-2" transform="translate(492 43)">
@@ -119,34 +121,35 @@
       <text class="candidate-label" x="15" y="25">Pair 3</text>
       <text class="trace-label" x="15" y="51">Reference</text>
       <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L342 0 C348 0 347 -12 356 -14 C364 -16 370 0 374 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L592 0 C598 0 597 -12 606 -14 C614 -16 620 0 624 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Contrast</text>
+      <text class="trace-label" x="15" y="145">Longer PR</text>
       <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L296 0 C302 0 301 -12 310 -14 C318 -16 324 0 328 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L546 0 C552 0 551 -12 560 -14 C568 -16 574 0 578 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 181) scale(.27 .56)"/>
     </g>
-              <text class="pair-caption" x="362" y="288">Matched rate. Contrasting PR evidence.</text>
+              <text class="pair-caption" x="362" y="288">Same R–R within each pair · different PR</text>
             </g>
           </svg>
-          <div class="construction-checks" aria-label="Construction checks"><span id="target-check"><i>✓</i> Target</span><span id="protect-check"><i>✓</i> Protected features</span><span id="answer-check"><i>✓</i> Answer</span><span class="feedback-tag" id="construction-feedback">Construction feedback ↗</span></div>
-          <div class="learning-route"><span id="admission-label">Verified Q/A</span><svg viewBox="0 0 300 22" aria-hidden="true"><path d="M0 11H293m-6-5 6 5-6 5"/><circle id="example-packet" cx="293" cy="11" r="4"/></svg><span>Student</span></div>
+          <div class="construction-checks" aria-label="ECG construction checks"><span id="target-check"><i>·</i> PR target</span><span id="protect-check"><i>·</i> R–R + QRS</span><span id="answer-check"><i>·</i> Answer grounding</span><span class="feedback-tag" id="construction-feedback">Waveform checks → construction repair</span></div>
+          <div class="ecg-question" id="ecg-question" data-state="candidate"><div><span class="question-label">ECG question</span><strong>Which interval changed?</strong><p id="question-answer">Contrasting PR · matched R–R within each pair.</p></div><span class="question-state" id="question-state">Next candidates</span></div>
+          <div class="learning-route"><span id="admission-label">Candidate ECG Q/A</span><svg viewBox="0 0 300 22" aria-hidden="true"><path d="M0 11H293m-6-5 6 5-6 5"/><circle id="example-packet" cx="293" cy="11" r="4"/></svg><span>ECG learner</span></div>
         </div>
         <div class="agent-column">
           <div class="agent-state updated" id="agent-state">
-            <div class="agent-heading"><span class="agent-icon" aria-hidden="true">φ</span><h3>Synthesis agent</h3><span id="agent-version">Revised</span></div>
+            <div class="agent-heading"><span class="agent-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 17H8l3-7 3 13 4-18 4 12h7"/></svg></span><h3>ECG synthesis agent</h3><span id="agent-version">Retained</span></div>
             <dl class="agent-rules">
-              <div id="operator-rule" class="changed"><dt>Operator</dt><dd><s id="operator-old">Stretch PQ</s><strong id="operator-value">PQ stretch + TP fix</strong></dd></div>
-              <div id="prompt-rule" class="changed"><dt>Recipe</dt><dd><s id="prompt-old">Direct practice</s><strong id="prompt-value">Contrast pairs</strong></dd></div>
-              <div id="sampling-rule" class="changed"><dt>Sampling</dt><dd><s id="sampling-old">Weak categories</s><strong id="sampling-value">Confusion pairs</strong></dd></div>
+              <div id="operator-rule" class="changed"><dt>Waveform</dt><dd><s id="operator-old">Stretch PQ</s><strong id="operator-value">PQ + TP compensation</strong></dd></div>
+              <div id="prompt-rule" class="changed"><dt>Teaching</dt><dd><s id="prompt-old">Direct practice</s><strong id="prompt-value">PR contrast pairs</strong></dd></div>
+              <div id="sampling-rule" class="changed"><dt>Focus</dt><dd><s id="sampling-old">Weak ECG categories</s><strong id="sampling-value">Interval confusion</strong></dd></div>
             </dl>
           </div>
           <div class="student-state">
-            <div><p class="student-label">Student learning</p><svg class="branch-scene" viewBox="0 0 244 100" role="img" aria-label="Three candidate interventions are trained from the same parent and compared"><path d="M29 50H75M75 50C102 50 95 20 123 20H174M75 50H174M75 50C102 50 95 80 123 80H174"/><circle class="parent-dot" cx="29" cy="50" r="10"/><circle class="branch-node branch-a" cx="188" cy="20" r="13"/><circle class="branch-node branch-b selected" cx="188" cy="50" r="13"/><circle class="branch-node branch-c" cx="188" cy="80" r="13"/><text x="188" y="24">A</text><text x="188" y="54">B</text><text x="188" y="84">C</text></svg><p id="student-status">Compare interventions</p></div>
-            <div class="learner-return active"><svg viewBox="0 0 45 203" aria-hidden="true"><path id="learner-return-path" d="M3 186C44 186 44 18 3 18m7-6-7 6 7 6"/><circle id="feedback-packet" r="4" cx="3" cy="18"/></svg><span>Learner feedback</span></div>
+            <div><p class="student-label">ECG learner · same parent</p><svg class="branch-scene" viewBox="0 0 244 100" role="img" aria-label="Three candidate interventions are trained from the same parent and compared"><path d="M29 50H75M75 50C102 50 95 20 123 20H174M75 50H174M75 50C102 50 95 80 123 80H174"/><circle class="parent-dot" cx="29" cy="50" r="10"/><circle class="branch-node branch-a" cx="188" cy="20" r="13"/><circle class="branch-node branch-b selected" cx="188" cy="50" r="13"/><circle class="branch-node branch-c" cx="188" cy="80" r="13"/><text x="188" y="24">A</text><text x="188" y="54">B</text><text x="188" y="84">C</text></svg><p id="student-status">Retained recipe → next ECG batch</p></div>
+            <div class="learner-return active"><svg viewBox="0 0 45 203" aria-hidden="true"><path id="learner-return-path" d="M3 186C44 186 44 18 3 18m7-6-7 6 7 6"/><circle id="feedback-packet" r="4" cx="3" cy="18"/></svg><span>ECG error profile</span></div>
           </div>
         </div>
       </div>
-      <div class="demo-footer"><p id="phase-caption">The revised agent constructs paired examples for the next comparison.</p><div class="demo-controls"><button id="play-toggle" type="button" aria-label="Play animation">Play</button><button id="previous-step" type="button" aria-label="Previous step">←</button><div class="step-buttons" aria-label="Animation steps"><button type="button" data-step-to="0" aria-label="Step 1: Edit">1</button><button type="button" data-step-to="1" aria-label="Step 2: Repair">2</button><button type="button" data-step-to="2" aria-label="Step 3: Admit">3</button><button type="button" data-step-to="3" aria-label="Step 4: Learn">4</button><button type="button" data-step-to="4" aria-label="Step 5: Evolve">5</button><button type="button" data-step-to="5" aria-label="Step 6: New candidates" aria-current="step">6</button></div><button id="next-step" type="button" aria-label="Next step">→</button></div></div>
+      <div class="demo-footer"><p id="phase-caption">The next batch contrasts PR at matched R–R. Each candidate is checked before use.</p><div class="demo-controls"><button id="play-toggle" type="button" aria-label="Play animation">Play</button><button id="previous-step" type="button" aria-label="Previous step">←</button><div class="step-buttons" aria-label="Animation steps"><button type="button" data-step-to="0" aria-label="Step 1: Measure and edit PR">1</button><button type="button" data-step-to="1" aria-label="Step 2: Preserve R–R and QRS">2</button><button type="button" data-step-to="2" aria-label="Step 3: Verify ECG evidence and answer">3</button><button type="button" data-step-to="3" aria-label="Step 4: Propose ECG teaching recipes">4</button><button type="button" data-step-to="4" aria-label="Step 5: Select a qualifying recipe">5</button><button type="button" data-step-to="5" aria-label="Step 6: Generate PR contrast pairs" aria-current="step">6</button></div><button id="next-step" type="button" aria-label="Next step">→</button></div></div>
       <div class="animation-progress" role="progressbar" aria-label="Animation position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="animation-progress"></span></div>
     </div>
-    <p class="demo-note">Schematic mechanism · waveform shapes and branch choices are illustrative.</p>
+    <p class="demo-note">Schematic ECGs · candidate selection and external benchmark evaluation use separate sets.</p>
   </section>
 
 
