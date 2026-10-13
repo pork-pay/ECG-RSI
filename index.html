@@ -169,16 +169,16 @@
 
 
   <section class="container findings-section" id="findings" aria-labelledby="findings-title">
-    <h2 id="findings-title">What changes as the learner improves?</h2>
+    <h2 id="findings-title">Teaching choices and transfer</h2>
     <div class="insights">
       <article class="teaching-insight"><h3>The preferred intervention changes.</h3><div class="teaching-path"><div><span>R1</span><strong>Reinforce</strong></div><i aria-hidden="true">→</i><div><span>R2</span><strong>Contrast</strong></div><i aria-hidden="true">→</i><div><span>R3</span><strong>Contrast</strong></div></div><p>Development feedback proposes interventions; separate selection compares their utility.</p></article>
       <article class="transfer-insight"><h3>External gains diminish.</h3><div class="gain-bars" aria-label="Successive external S7 gains: R1 13.07, R2 3.01, R3 0.38 points"><div><span>R1</span><i style="--gain:100%"></i><strong>+13.07</strong></div><div><span>R2</span><i style="--gain:23.03%"></i><strong>+3.01</strong></div><div><span>R3</span><i style="--gain:2.91%"></i><strong>+0.38</strong></div></div><p>Seven-benchmark mean gain (points).</p></article>
     </div>
     <div class="headline-results"><div><strong>+21.47<span>pp</span></strong><span>Mean QA accuracy</span></div><div><strong>+9.77<span>points</span></strong><span>Mean classification F1</span></div><p>Qwen3.5-35B-A3B · three rounds<br> Seven benchmarks · reported R-A trajectory</p></div>
     <figure class="paper-comparison" id="benchmark-comparison">
-      <div class="comparison-heading"><h3>Compare the benchmark trajectories.</h3><a href="assets/benchmark-comparison.pdf" target="_blank" rel="noopener">Open original figure ↗</a></div>
+      <div class="comparison-heading"><h3>Benchmark trajectories</h3><a href="assets/benchmark-comparison.pdf" target="_blank" rel="noopener">Open original figure ↗</a></div>
       <div class="comparison-scroll" tabindex="0" role="region" aria-label="Figure 4 benchmark comparisons; scroll horizontally on small screens"><a href="assets/benchmark-comparison.pdf" target="_blank" rel="noopener"><img src="assets/benchmark-comparison.png" width="1584" height="467" alt="Original paper Figure 4: question-answering accuracy, classification F1, validation accuracy, and tree, uniform-allocation and chain strategy trajectories across R0 to R3." loading="lazy"></a></div>
-      <figcaption>Paper Fig. 4. Accuracy, F1, validation and strategy comparisons across rounds. S7 is the equal-weight mean of seven benchmark scores. <span class="scroll-hint">Scroll to compare panels.</span></figcaption>
+      <figcaption>Figure 4. Accuracy, F1, validation and strategy comparisons. S7 is the equal-weight mean of seven benchmark scores. <span class="scroll-hint">Scroll to compare panels.</span></figcaption>
     </figure>
     <details class="detail-block" id="experiment-details"><summary>Experiment details and benchmark scores</summary><div class="detail-content"><p>S7 equally weights four accuracy and three classification F1 scores on a 0–100 scale. The main trajectory rises from 30.15 to 46.61. Mean QA accuracy increases from 34.57% to 56.04%; mean F1 increases from 24.27 to 34.03. Gains are computed before rounding.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Round-by-round benchmark table; scroll horizontally on small screens">
           <table><caption>ECG-RSI main trajectory (R-A)</caption><thead><tr><th scope="col">Benchmark</th><th scope="col">Metric</th><th scope="col">R0</th><th scope="col">R1</th><th scope="col">R2</th><th scope="col">R3</th></tr></thead><tbody>
@@ -191,13 +191,13 @@
             <tr><th scope="row">CODE-15%</th><td>F1</td><td>30.20</td><td>38.80</td><td>41.50</td><td>41.00</td></tr>
             <tr class="aggregate"><th scope="row">S7</th><td>Equal-weight mean</td><td>30.15</td><td>43.22</td><td>46.23</td><td>46.61</td></tr>
           </tbody></table>
-        </div><p>Interventions are compared from the same parent on a separate development selection set. External benchmarks remain held out from generation and selection. Source: the paper’s main results and “Round-Wise Branch Selection and Data Composition.” These are observations from the reported setting.</p></div></details>
+        </div><p>Interventions are compared from the same parent on a separate development selection set. External benchmarks remain held out from generation and selection. Source: the paper’s main results and “Round-Wise Branch Selection and Data Composition.”</p></div></details>
     <details class="detail-block" id="method"><summary>Recorded waveform example and full method</summary><div class="detail-content"><p>The appendix PR example requests 300 ms and remeasures 298 ms, with heart rate 74.6 bpm. It lengthens the PQ segment and compensates in the TP segment to preserve the RR interval. These values follow the paper’s automatic measurement convention.</p><figure><a href="assets/case-pr.png" target="_blank" rel="noopener"><img src="assets/case-pr.png" width="1844" height="1060" alt="Recorded PR-prolongation example from the paper" loading="lazy"></a><figcaption>Paper appendix, Case 1. Click to inspect the original and edited ECGs.</figcaption></figure><figure><a href="assets/method.svg" target="_blank" rel="noopener"><img src="assets/method.svg" width="896" height="410" alt="ECG-RSI framework with construction and learner feedback loops" loading="lazy"></a><figcaption>Paper Fig. 1. Construction feedback repairs operators and prompts. Development feedback proposes recipes; a separate development set selects a model from same-parent candidates.</figcaption></figure></div></details>
   </section>
 
   <section class="container resources-section" id="resources" aria-label="Resources">
     <div class="resource-links"><a href="papers/ecg-rsi.pdf">Paper ↗</a><a href="https://pork-pay.github.io/ECG-RSI/">Project ↗</a><a href="https://github.com/pork-pay/ECG-RSI">GitHub ↗</a><a href="https://pork-pay.github.io/MedEvo/">Related: MedEvo ↗</a></div>
-    <p class="availability">Paper and project materials are available. Training/synthesis implementation, model weights and training data are not included.</p>
+    <p class="availability">Research code, model weights and training data are not released.</p>
     <details class="detail-block citation" id="cite"><summary>Citation</summary><div class="detail-content"><button class="copy-button" type="button" data-copy="bibtex">Copy BibTeX</button><pre><code id="bibtex">@misc{wang2026ecgrsi,
   title = {ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution},
   author = {Wang, Xiaoliang and Chen, Zhuo and Zheng, Chuanyang and Lao, Jiangwei and Wang, Quanbin and Lin, Honglin and Liu, Jiajia and Lu, Zhihong and Jin, Hao and Wang, Jian and Wu, Lijun},
