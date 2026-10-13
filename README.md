@@ -1,13 +1,13 @@
 <div align="center">
 
-<p><img src="assets/zhejiang-university-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Zhejiang University</sub> &nbsp;&nbsp; <img src="assets/ant-group-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Ant Group</sub> &nbsp;&nbsp; <img src="assets/shanghai-ai-lab-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Shanghai AI Lab</sub> &nbsp;&nbsp; <img src="assets/shanghai-jiao-tong-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>SJTU</sub></p>
+<p><img src="assets/zhejiang-university-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Zhejiang&nbsp;University</sub> &nbsp;&nbsp; <img src="assets/ant-group-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Ant&nbsp;Group</sub> &nbsp;&nbsp; <img src="assets/shanghai-ai-lab-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Shanghai&nbsp;AI&nbsp;Lab</sub> &nbsp;&nbsp; <img src="assets/shanghai-jiao-tong-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>SJTU</sub></p>
 
 <h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
 <p>Xiaoliang&nbsp;Wang<sup>1,2*</sup>, Zhuo&nbsp;Chen<sup>2*</sup>, Chuanyang&nbsp;Zheng<sup>2</sup>, Jiangwei&nbsp;Lao<sup>2</sup>, Quanbin&nbsp;Wang<sup>2</sup>,<br>
 Honglin&nbsp;Lin<sup>3,4</sup>, Jiajia&nbsp;Liu<sup>2</sup>, Zhihong&nbsp;Lu<sup>2</sup>, Hao&nbsp;Jin<sup>1</sup>, Jian&nbsp;Wang<sup>2</sup>, Lijun&nbsp;Wu<sup>2,3†</sup></p>
 
-<p><sub><sup>1</sup> Zhejiang University &nbsp;·&nbsp; <sup>2</sup> Ant Group &nbsp;·&nbsp; <sup>3</sup> Shanghai Artificial Intelligence Laboratory &nbsp;·&nbsp; <sup>4</sup> Shanghai Jiao Tong University<br>
+<p><sub><sup>1</sup>&nbsp;Zhejiang&nbsp;University &nbsp;·&nbsp; <sup>2</sup>&nbsp;Ant&nbsp;Group &nbsp;·&nbsp; <sup>3</sup>&nbsp;Shanghai&nbsp;Artificial&nbsp;Intelligence&nbsp;Laboratory &nbsp;·&nbsp; <sup>4</sup>&nbsp;Shanghai&nbsp;Jiao&nbsp;Tong&nbsp;University<br>
 <sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</sub></p>
 
 <p><a href="papers/ecg-rsi.pdf"><img src="assets/readme-paper.svg" height="24" alt="Paper"></a> &nbsp;<a href="https://pork-pay.github.io/ECG-RSI/"><img src="assets/readme-project.svg" height="24" alt="Project page"></a></p>
