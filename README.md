@@ -19,7 +19,7 @@ Honglin&nbsp;Lin<sup>3,4</sup>, Jiajia&nbsp;Liu<sup>2</sup>, Zhihong&nbsp;Lu<sup
 </div>
 
 <p align="center">
-  <a href="https://pork-pay.github.io/ECG-RSI/#evolution"><img src="assets/ecg-evolution.gif" width="100%" alt="ECG-RSI evolution loop — schematic"></a>
+  <a href="https://pork-pay.github.io/ECG-RSI/#evolution"><img src="assets/ecg-evolution.gif" width="100%" alt="ECG-RSI: measure PR, preserve R–R and QRS, and evolve waveform-grounded supervision — schematic"></a>
 </p>
 
 <p align="center">
