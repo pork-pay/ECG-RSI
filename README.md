@@ -1,6 +1,6 @@
 <div align="center">
 
-<p><img src="assets/zhejiang-university-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Zhejiang&nbsp;University</sub> &nbsp;&nbsp; <img src="assets/ant-group-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Ant&nbsp;Group</sub> &nbsp;&nbsp; <img src="assets/shanghai-ai-lab-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Shanghai&nbsp;AI&nbsp;Lab</sub> &nbsp;&nbsp; <img src="assets/shanghai-jiao-tong-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>SJTU</sub></p>
+<p><img src="assets/readme-zju.svg" height="38" align="middle" alt="Zhejiang University"> &nbsp;&nbsp; <img src="assets/readme-ant.svg" height="38" align="middle" alt="Ant Group"> &nbsp;&nbsp; <img src="assets/readme-shanghai-ai.svg" height="38" align="middle" alt="Shanghai AI Lab"> &nbsp;&nbsp; <img src="assets/readme-sjtu.svg" height="38" align="middle" alt="SJTU"></p>
 
 <h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
@@ -10,7 +10,11 @@ Honglin&nbsp;Lin<sup>3,4</sup>, Jiajia&nbsp;Liu<sup>2</sup>, Zhihong&nbsp;Lu<sup
 <p><sub><sup>1</sup>&nbsp;Zhejiang&nbsp;University &nbsp;·&nbsp; <sup>2</sup>&nbsp;Ant&nbsp;Group &nbsp;·&nbsp; <sup>3</sup>&nbsp;Shanghai&nbsp;Artificial&nbsp;Intelligence&nbsp;Laboratory &nbsp;·&nbsp; <sup>4</sup>&nbsp;Shanghai&nbsp;Jiao&nbsp;Tong&nbsp;University<br>
 <sup>*</sup> Equal contribution &nbsp;·&nbsp; <sup>†</sup> Corresponding author</sub></p>
 
-<p><a href="papers/ecg-rsi.pdf"><img src="assets/readme-paper.svg" height="24" alt="Paper"></a> &nbsp;<a href="https://pork-pay.github.io/ECG-RSI/"><img src="assets/readme-project.svg" height="24" alt="Project page"></a></p>
+[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](papers/ecg-rsi.pdf)
+[![Website](https://img.shields.io/badge/Website-ECG--RSI-625087.svg)](https://pork-pay.github.io/ECG-RSI/)
+[![GitHub stars](https://img.shields.io/github/stars/pork-pay/ECG-RSI?style=social)](https://github.com/pork-pay/ECG-RSI/stargazers)
+[![Benchmarks](https://img.shields.io/badge/Benchmarks-7-267F70.svg)](#results)
+[![Code status](https://img.shields.io/badge/Code-Being%20prepared-6C757D.svg)](#release-plan)
 
 </div>
 
