@@ -17,8 +17,7 @@
 </p>
 
 <p align="center">
-  <strong>The best teaching strategy changes as the learner improves.</strong><br>
-  Check learning gains on independent benchmarks.<br>
+  <strong>Advancing ECG reasoning through waveform-grounded self-improvement.</strong><br>
   <a href="https://pork-pay.github.io/ECG-RSI/#evolution">Explore the interactive walkthrough →</a>
 </p>
 

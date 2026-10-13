@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution</title>
-  <meta name="description" content="Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.">
+  <meta name="description" content="Advancing ECG reasoning through waveform-grounded self-improvement.">
   <meta name="theme-color" content="#173956">
   <link rel="canonical" href="https://pork-pay.github.io/ECG-RSI/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution">
-  <meta property="og:description" content="Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.">
+  <meta property="og:description" content="Advancing ECG reasoning through waveform-grounded self-improvement.">
   <meta property="og:url" content="https://pork-pay.github.io/ECG-RSI/">
   <meta property="og:image" content="https://pork-pay.github.io/ECG-RSI/assets/case-pr.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -68,7 +68,7 @@
     </ol>
     <p class="author-note"><span class="note-entry"><b class="note-symbol">*</b> Equal contribution</span><span class="note-divider" aria-hidden="true">·</span><span class="note-entry"><b class="note-symbol">†</b> Corresponding author</span></p>
   </section>
-    <p class="hero-idea">Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.</p>
+    <p class="hero-idea">Advancing ECG reasoning through waveform-grounded self-improvement.</p>
     <div class="hero-links"><a href="papers/ecg-rsi.pdf">Paper ↗</a><a href="https://github.com/pork-pay/ECG-RSI">GitHub ↗</a></div>
   </section>
 
@@ -78,7 +78,7 @@
       <div class="demo-network">
         <div class="signal-workbench">
           <p class="zone-heading">Signal construction / verification</p>
-          <svg id="signal-scene" viewBox="0 0 724 300" role="img" aria-labelledby="scene-title scene-desc">
+          <svg id="signal-scene" viewBox="0 0 724 330" role="img" aria-labelledby="scene-title scene-desc">
             <title id="scene-title">Verified ECG synthesis and development feedback</title>
             <desc id="scene-desc">PR is measured from P onset to QRS onset. An illustrative edit lengthens PR, while construction feedback repairs R–R drift and preserves QRS morphology. Waveform-grounded answers train an ECG learner. Development feedback proposes three recipes from the same parent, and a separate development selection set determines the retained learner. Independent evaluation uses held-out benchmarks.</desc>
             <defs><pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#eddee2" stroke-width=".7"/></pattern><clipPath id="signal-clip"><rect x="12" y="36" width="696" height="235" rx="5"/></clipPath></defs>
@@ -103,30 +103,30 @@
             <g id="next-batch" class="next-batch">
               <text class="scene-label" x="24" y="24">Next ECG lesson: PR contrasts</text>
               <g class="candidate-pair" id="candidate-0" transform="translate(16 43)">
-      <rect class="candidate-frame" x="0" y="0" width="218" height="222" rx="9"/>
-      <text class="candidate-label" x="15" y="25">Pair 1</text>
-      <text class="trace-label" x="15" y="51">Reference</text>
-      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L302 0 C308 0 307 -12 316 -14 C324 -16 330 0 334 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L512 0 C518 0 517 -12 526 -14 C534 -16 540 0 544 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Longer PR</text>
-      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L256 0 C262 0 261 -12 270 -14 C278 -16 284 0 288 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L466 0 C472 0 471 -12 480 -14 C488 -16 494 0 498 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 181) scale(.27 .56)"/>
+      <rect class="candidate-frame" x="0" y="0" width="218" height="242" rx="9"/>
+      <text class="candidate-label" x="15" y="31">Pair 1</text>
+      <text class="trace-label" x="15" y="69">Reference</text>
+      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L302 0 C308 0 307 -12 316 -14 C324 -16 330 0 334 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L512 0 C518 0 517 -12 526 -14 C534 -16 540 0 544 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 112) scale(.27 .56)"/>
+      <text class="trace-label" x="15" y="159">Longer PR</text>
+      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L256 0 C262 0 261 -12 270 -14 C278 -16 284 0 288 0 L352 0 L357 10 L364 -48 L370 20 L377 0 L394 0 C408 0 411 -22 425 -24 C441 -25 451 0 460 0 L466 0 C472 0 471 -12 480 -14 C488 -16 494 0 498 0 L562 0 L567 10 L574 -48 L580 20 L587 0 L604 0 C618 0 621 -22 635 -24 C651 -25 661 0 670 0" transform="translate(7 202) scale(.27 .56)"/>
     </g>
 <g class="candidate-pair" id="candidate-1" transform="translate(254 43)">
-      <rect class="candidate-frame" x="0" y="0" width="218" height="222" rx="9"/>
-      <text class="candidate-label" x="15" y="25">Pair 2</text>
-      <text class="trace-label" x="15" y="51">Reference</text>
-      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L322 0 C328 0 327 -12 336 -14 C344 -16 350 0 354 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L552 0 C558 0 557 -12 566 -14 C574 -16 580 0 584 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Longer PR</text>
-      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L276 0 C282 0 281 -12 290 -14 C298 -16 304 0 308 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L506 0 C512 0 511 -12 520 -14 C528 -16 534 0 538 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 181) scale(.27 .56)"/>
+      <rect class="candidate-frame" x="0" y="0" width="218" height="242" rx="9"/>
+      <text class="candidate-label" x="15" y="31">Pair 2</text>
+      <text class="trace-label" x="15" y="69">Reference</text>
+      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L322 0 C328 0 327 -12 336 -14 C344 -16 350 0 354 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L552 0 C558 0 557 -12 566 -14 C574 -16 580 0 584 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 112) scale(.27 .56)"/>
+      <text class="trace-label" x="15" y="159">Longer PR</text>
+      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L276 0 C282 0 281 -12 290 -14 C298 -16 304 0 308 0 L372 0 L377 10 L384 -48 L390 20 L397 0 L414 0 C428 0 431 -22 445 -24 C461 -25 471 0 480 0 L506 0 C512 0 511 -12 520 -14 C528 -16 534 0 538 0 L602 0 L607 10 L614 -48 L620 20 L627 0 L644 0 C658 0 661 -22 675 -24 C691 -25 701 0 710 0" transform="translate(7 202) scale(.27 .56)"/>
     </g>
 <g class="candidate-pair" id="candidate-2" transform="translate(492 43)">
-      <rect class="candidate-frame" x="0" y="0" width="218" height="222" rx="9"/>
-      <text class="candidate-label" x="15" y="25">Pair 3</text>
-      <text class="trace-label" x="15" y="51">Reference</text>
-      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L342 0 C348 0 347 -12 356 -14 C364 -16 370 0 374 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L592 0 C598 0 597 -12 606 -14 C614 -16 620 0 624 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 85) scale(.27 .56)"/>
-      <text class="trace-label" x="15" y="145">Longer PR</text>
-      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L296 0 C302 0 301 -12 310 -14 C318 -16 324 0 328 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L546 0 C552 0 551 -12 560 -14 C568 -16 574 0 578 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 181) scale(.27 .56)"/>
+      <rect class="candidate-frame" x="0" y="0" width="218" height="242" rx="9"/>
+      <text class="candidate-label" x="15" y="31">Pair 3</text>
+      <text class="trace-label" x="15" y="69">Reference</text>
+      <path class="reference-trace" d="M22 0 L92 0 C98 0 97 -12 106 -14 C114 -16 120 0 124 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L342 0 C348 0 347 -12 356 -14 C364 -16 370 0 374 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L592 0 C598 0 597 -12 606 -14 C614 -16 620 0 624 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 112) scale(.27 .56)"/>
+      <text class="trace-label" x="15" y="159">Longer PR</text>
+      <path class="contrast-trace" d="M22 0 L46 0 C52 0 51 -12 60 -14 C68 -16 74 0 78 0 L142 0 L147 10 L154 -48 L160 20 L167 0 L184 0 C198 0 201 -22 215 -24 C231 -25 241 0 250 0 L296 0 C302 0 301 -12 310 -14 C318 -16 324 0 328 0 L392 0 L397 10 L404 -48 L410 20 L417 0 L434 0 C448 0 451 -22 465 -24 C481 -25 491 0 500 0 L546 0 C552 0 551 -12 560 -14 C568 -16 574 0 578 0 L642 0 L647 10 L654 -48 L660 20 L667 0 L684 0 C698 0 701 -22 715 -24 C731 -25 741 0 750 0" transform="translate(7 202) scale(.27 .56)"/>
     </g>
-              <text class="pair-caption" x="362" y="288">Same R–R within each pair · different PR</text>
+              <text class="pair-caption" x="362" y="318">Same R–R within each pair · different PR</text>
             </g>
           </svg>
           <div class="construction-checks" aria-label="ECG construction checks"><span id="target-check"><i>·</i> PR target</span><span id="protect-check"><i>·</i> R–R + QRS</span><span id="answer-check"><i>·</i> Answer grounding</span><span class="feedback-tag" id="construction-feedback">Waveform checks → construction repair</span></div>
@@ -143,9 +143,15 @@
               <div id="sampling-rule" class="changed"><dt>Focus</dt><dd><s id="sampling-old">Weak ECG categories</s><strong id="sampling-value">Interval confusion</strong></dd></div>
             </dl>
           </div>
-          <div class="feedback-diagnosis" id="feedback-diagnosis"><span>Development feedback</span><div><strong>Interval confusion</strong><svg viewBox="0 0 38 16" aria-hidden="true"><path d="M1 8H35m-5-4 5 4-5 4"/><circle id="diagnosis-packet" cx="1" cy="8" r="2.5"/></svg><span>Contrast recipes</span></div></div>
+          <div class="feedback-diagnosis" id="feedback-diagnosis"><span>Development feedback</span><div class="diagnosis-body"><div class="diagnosis-content" id="diagnosis-content"><strong>Interval confusion</strong><svg viewBox="0 0 38 16" aria-hidden="true"><path d="M1 8H35m-5-4 5 4-5 4"/><circle id="diagnosis-packet" cx="1" cy="8" r="2.5"/></svg><span>Contrast recipes</span></div><p class="diagnosis-placeholder" id="diagnosis-placeholder">Learner assessment pending</p></div></div>
           <div class="student-state">
-            <div><p class="student-label">Same parent · matched training</p><svg class="branch-scene" viewBox="0 0 244 100" role="img" aria-label="Coverage, contrast and progression candidates share a parent and matched training; a separate development set selects the update"><path class="branch-stem" d="M29 50H75"/><path class="branch-route" d="M75 50C102 50 95 20 123 20H174"/><path class="branch-route selected" d="M75 50H174"/><path class="branch-route" d="M75 50C102 50 95 80 123 80H174"/><g class="branch-labels"><text x="122" y="14">Coverage</text><text x="122" y="44">Contrasts</text><text x="122" y="74">Progression</text></g><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="parent-dot" cx="29" cy="50" r="10"/><circle class="branch-node branch-a" cx="188" cy="20" r="13"/><circle class="branch-node branch-b selected" cx="188" cy="50" r="13"/><circle class="branch-node branch-c" cx="188" cy="80" r="13"/><text x="188" y="24">A</text><text x="188" y="54">B</text><text x="188" y="84">C</text></svg><p id="student-status">Retained learner → external evaluation</p></div>
+            <div><p class="student-label" id="student-heading">Retained branch</p><svg class="branch-scene" viewBox="0 0 260 154" role="img" aria-label="Coverage, contrast and progression candidates share a parent and matched training; a separate development set selects the update">
+              <g id="learner-placeholder" class="learner-placeholder"><circle class="parent-dot" cx="130" cy="66" r="14"/><text class="learner-label" x="130" y="104">ECG learner</text></g>
+              <g id="branch-origin"><path class="branch-stem" d="M22 76H54"/><circle class="parent-dot" cx="22" cy="76" r="10"/></g>
+              <g class="branch-candidate"><path class="branch-route" d="M54 76C72 76 65 26 87 26H98"/><circle class="branch-packet" cx="22" cy="76" r="2.7"/><circle class="branch-node branch-a" cx="112" cy="26" r="13"/><text x="112" y="31">A</text><text class="branch-label" x="141" y="31">Coverage</text></g>
+              <g class="branch-candidate"><path class="branch-route selected" d="M54 76H98"/><circle class="branch-packet" cx="22" cy="76" r="2.7"/><circle class="branch-node branch-b selected" cx="112" cy="76" r="13"/><text x="112" y="81">B</text><text class="branch-label" x="141" y="81">Contrasts</text></g>
+              <g class="branch-candidate"><path class="branch-route" d="M54 76C72 76 65 126 87 126H98"/><circle class="branch-packet" cx="22" cy="76" r="2.7"/><circle class="branch-node branch-c" cx="112" cy="126" r="13"/><text x="112" y="131">C</text><text class="branch-label" x="141" y="131">Progression</text></g>
+            </svg><p id="student-status">Retained learner → external evaluation</p></div>
             <div class="learner-return"><svg viewBox="0 0 25 203" aria-hidden="true"><defs><marker id="development-feedback-arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M2 2L8 5L2 8"/></marker></defs><path id="learner-return-path" marker-end="url(#development-feedback-arrowhead)" d="M3 185H14Q22 185 22 177V26Q22 18 14 18H3"/><circle id="feedback-packet" r="2.5" cx="3" cy="185"/></svg><span>Development feedback</span></div>
           </div>
         </div>
