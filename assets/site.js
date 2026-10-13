@@ -15,6 +15,7 @@
     rrBracket: byId("rr-bracket"), rrLabel: byId("rr-label"), scan: byId("scan-line"),
     target: byId("target-check"), protect: byId("protect-check"), answer: byId("answer-check"),
     construction: byId("construction-feedback"), admission: byId("admission-label"),
+    question: byId("ecg-question"), questionAnswer: byId("question-answer"), questionState: byId("question-state"),
     examplePacket: byId("example-packet"), feedbackPacket: byId("feedback-packet"),
     operator: byId("operator-rule"), recipe: byId("prompt-rule"), sampling: byId("sampling-rule"),
     operatorValue: byId("operator-value"), recipeValue: byId("prompt-value"), samplingValue: byId("sampling-value"),
@@ -25,20 +26,20 @@
     progress: byId("animation-progress"), progressBar: demo.querySelector("[role=progressbar]")
   };
   const titles = [
-    "Edit the waveform.", "Repair the construction rule.", "Admit verified supervision.",
-    "Propose three interventions.", "Compare, then retain.", "Generate contrasting examples."
+    "Target PR-interval reasoning.", "Lengthen PR. Preserve R–R.", "Ground the answer in the ECG.",
+    "Learn from ECG reasoning errors.", "Compare the teaching recipes.", "Generate targeted ECG contrasts."
   ];
   const captions = [
-    "A requested PR contrast changes the waveform.",
-    "Construction feedback repairs the operator while preserving R–R.",
-    "Waveform and answer checks admit the example for training.",
-    "Learner errors propose A / B / C from the same parent.",
-    "A separate selection set chooses which recipe to retain.",
-    "The retained recipe produces a different next batch."
+    "Measure P onset → QRS onset. Change PR while checking the rest of the ECG.",
+    "PQ stretching lengthens PR; TP compensation restores R–R without changing QRS shape.",
+    "Remeasured waveform facts must support the question and its answer before training.",
+    "ECG errors guide three teaching recipes, trained from the same parent checkpoint.",
+    "An independent selection set chooses the qualifying learner and its recipe.",
+    "The next batch contrasts PR at matched R–R. Each candidate is checked before use."
   ];
   const studentLabels = [
-    "Current learner", "Current learner", "Verified examples → SFT",
-    "Diagnose · propose A/B/C", "Same parent · separate selection", "Retained recipe → next batch"
+    "Current ECG learner", "Current ECG learner", "Grounded ECG Q/A → SFT",
+    "ECG error profile → A / B / C", "Independent selection set", "Retained recipe → next ECG batch"
   ];
   const clamp = x => Math.max(0, Math.min(1, x));
   const ease = x => { const p = clamp(x); return p * p * (3 - 2 * p); };
@@ -99,12 +100,12 @@
     ui.region.setAttribute("width", (142 - prStart).toFixed(3));
     ui.prBracket.setAttribute("d", `M${prStart} 251v7H142v-7`);
     ui.prLabel.setAttribute("x", ((prStart + 142) / 2).toFixed(3));
-    ui.prLabel.textContent = stretch > 0.5 ? "Longer PR" : "PR";
+    ui.prLabel.textContent = stretch > 0.5 ? "PR longer" : "PR interval";
     ui.rrBracket.setAttribute("d", `M154 163v-9H${154 + rr}v9`);
     ui.rrLabel.setAttribute("x", (154 + rr / 2).toFixed(3));
-    ui.rrLabel.textContent = rr > 214 ? "R–R drift" : "R–R fixed";
-    ui.rrLabel.style.fill = rr > 214 ? "var(--warn)" : "var(--muted)";
-    ui.rrBracket.style.stroke = rr > 214 ? "var(--warn)" : "#667f92";
+    ui.rrLabel.textContent = rr > 214 ? "R–R drift" : "R–R preserved";
+    ui.rrLabel.style.fill = rr > 214 ? "var(--ecg-red)" : "var(--ecg-purple)";
+    ui.rrBracket.style.stroke = rr > 214 ? "var(--ecg-red)" : "var(--ecg-purple)";
     ui.comparison.style.display = step === 5 ? "none" : "";
     ui.nextBatch.style.display = step === 5 ? "" : "none";
     ui.comparison.style.opacity = "1";
@@ -117,20 +118,24 @@
     ui.scan.setAttribute("x2", String(24 + 666 * clamp(p / 0.7)));
     ui.scan.style.opacity = step === 2 && p < 0.72 ? "0.8" : "0";
 
-    check(ui.target, targetReady ? "pass" : "pending");
-    check(ui.protect, protectedReady ? "pass" : targetReady ? "fail" : "pending");
-    check(ui.answer, answerReady ? "pass" : "pending");
+    const nextCandidates = step === 5;
+    check(ui.target, nextCandidates ? "pending" : targetReady ? "pass" : "pending");
+    check(ui.protect, nextCandidates ? "pending" : protectedReady ? "pass" : targetReady ? "fail" : "pending");
+    check(ui.answer, nextCandidates ? "pending" : answerReady ? "pass" : "pending");
     ui.construction.classList.toggle("active", step === 1);
-    ui.admission.textContent = answerReady ? "Verified Q/A" : "Candidate Q/A";
+    ui.admission.textContent = !nextCandidates && answerReady ? "Verified ECG Q/A" : "Candidate ECG Q/A";
+    ui.question.dataset.state = nextCandidates ? "candidate" : answerReady ? "verified" : targetReady && !protectedReady ? "repair" : "checking";
+    ui.questionAnswer.textContent = nextCandidates ? "Contrasting PR · matched R–R within each pair." : answerReady ? "Longer PR · R–R and QRS preserved." : targetReady && !protectedReady ? "PR changed, but R–R drift needs repair." : "Remeasure PR, R–R and QRS before answering.";
+    ui.questionState.textContent = nextCandidates ? "Next candidates" : answerReady ? "Evidence checked" : targetReady && !protectedReady ? "Repair required" : "Checking evidence";
     ui.examplePacket.style.opacity = step === 2 && p > 0.43 ? "1" : "0";
     ui.examplePacket.setAttribute("cx", String(293 * ease((p - 0.43) / 0.46)));
 
     ui.operator.classList.toggle("changed", operatorChanged);
     ui.recipe.classList.toggle("changed", recipeChanged);
     ui.sampling.classList.toggle("changed", recipeChanged);
-    ui.operatorValue.textContent = operatorChanged ? "PQ stretch + TP fix" : "Stretch PQ";
-    ui.recipeValue.textContent = recipeChanged ? "Contrast pairs" : "Direct practice";
-    ui.samplingValue.textContent = recipeChanged ? "Confusion pairs" : "Weak categories";
+    ui.operatorValue.textContent = operatorChanged ? "PQ + TP compensation" : "Stretch PQ";
+    ui.recipeValue.textContent = recipeChanged ? "PR contrast pairs" : "Direct practice";
+    ui.samplingValue.textContent = recipeChanged ? "Interval confusion" : "Weak ECG categories";
     ui.version.textContent = recipeChanged ? "Retained" : step === 3 || step === 4 ? "Proposing" : operatorChanged ? "Repaired" : "Current";
     ui.agent.classList.toggle("updated", recipeChanged);
     ui.branches.forEach((node, i) => {
