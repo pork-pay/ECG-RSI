@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution</title>
-  <meta name="description" content="ECG-RSI turns learner errors into targeted ECG supervision: edit and remeasure waveforms, compare training interventions, and evaluate transfer to external benchmarks.">
+  <meta name="description" content="Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.">
   <meta name="theme-color" content="#173956">
   <link rel="canonical" href="https://pork-pay.github.io/ECG-RSI/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution">
-  <meta property="og:description" content="Verified waveform synthesis and feedback-guided comparison of training interventions.">
+  <meta property="og:description" content="Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.">
   <meta property="og:url" content="https://pork-pay.github.io/ECG-RSI/">
   <meta property="og:image" content="https://pork-pay.github.io/ECG-RSI/assets/case-pr.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -68,18 +68,19 @@
     </ol>
     <p class="author-note"><span class="note-entry"><b class="note-symbol">*</b> Equal contribution</span><span class="note-divider" aria-hidden="true">·</span><span class="note-entry"><b class="note-symbol">†</b> Corresponding author</span></p>
   </section>
-    <p class="hero-idea">Turn learner errors into the next generation of verified ECG supervision.</p>
+    <p class="hero-idea">Verified waveform synthesis and intervention search on development data, with generalization assessed on independent ECG benchmarks.</p>
     <div class="hero-links"><a href="papers/ecg-rsi.pdf">Paper ↗</a><a href="https://github.com/pork-pay/ECG-RSI">GitHub ↗</a></div>
   </section>
 
   <section class="container evolution-section" id="evolution" aria-label="Animated ECG-RSI mechanism">
-    <div class="evolution-demo" id="ecg-demo" data-step="5">
-      <div class="demo-heading"><div><p class="eyebrow">ECG evidence → targeted supervision</p><h2 id="demo-title">Generate targeted ECG contrasts.</h2></div><div class="demo-phase"><span class="scene-kind">Schematic</span><span class="phase-count" id="phase-count">06 / 06</span></div></div>
+    <div class="evolution-demo" id="ecg-demo" data-step="7" data-focus="evaluation">
+      <div class="demo-heading"><div><p class="eyebrow">ECG evidence → targeted supervision</p><h2 id="demo-title">Independent ECG evaluation</h2></div><div class="demo-phase"><span class="scene-kind">Schematic</span><span class="phase-count" id="phase-count">08 / 08</span></div></div>
       <div class="demo-network">
         <div class="signal-workbench">
+          <p class="zone-heading">Signal construction / verification</p>
           <svg id="signal-scene" viewBox="0 0 724 300" role="img" aria-labelledby="scene-title scene-desc">
-            <title id="scene-title">ECG construction and next-generation supervision</title>
-            <desc id="scene-desc">PR is measured from P onset to QRS onset. An illustrative edit lengthens PR, while construction feedback repairs R–R drift and preserves QRS morphology. Waveform-grounded answers train an ECG learner. Its errors propose three recipes from the same parent, and a separate selection set determines the retained learner and next examples.</desc>
+            <title id="scene-title">Verified ECG synthesis and development feedback</title>
+            <desc id="scene-desc">PR is measured from P onset to QRS onset. An illustrative edit lengthens PR, while construction feedback repairs R–R drift and preserves QRS morphology. Waveform-grounded answers train an ECG learner. Development feedback proposes three recipes from the same parent, and a separate development selection set determines the retained learner. Independent evaluation uses held-out benchmarks.</desc>
             <defs><pattern id="ecg-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#eddee2" stroke-width=".7"/></pattern><clipPath id="signal-clip"><rect x="12" y="36" width="696" height="235" rx="5"/></clipPath></defs>
             <g id="wave-comparison" class="wave-comparison">
               <rect x="12" y="36" width="696" height="235" fill="url(#ecg-grid)" rx="5"/>
@@ -88,6 +89,7 @@
               <g class="signal-landmarks" aria-label="P wave, QRS complex and T wave"><text x="106" y="62">P</text><text x="154" y="30">QRS</text><text x="215" y="53">T</text></g>
               <g class="alignment-guides"><path d="M154 38V254 M364 38V254 M574 38V254"/></g>
               <path class="reference-trace" id="source-wave" d="M22 92.00 L92.00 92.00 C98.00 92.00 97.00 80.00 106.00 78.00 C114.00 76.00 120.00 92.00 124.00 92.00 L142.00 92.00 L147.00 102.00 L154.00 44.00 L160.00 112.00 L167.00 92.00 L184.00 92.00 C198.00 92.00 201.00 70.00 215.00 68.00 C231.00 67.00 241.00 92.00 250.00 92.00 L302.00 92.00 C308.00 92.00 307.00 80.00 316.00 78.00 C324.00 76.00 330.00 92.00 334.00 92.00 L352.00 92.00 L357.00 102.00 L364.00 44.00 L370.00 112.00 L377.00 92.00 L394.00 92.00 C408.00 92.00 411.00 70.00 425.00 68.00 C441.00 67.00 451.00 92.00 460.00 92.00 L512.00 92.00 C518.00 92.00 517.00 80.00 526.00 78.00 C534.00 76.00 540.00 92.00 544.00 92.00 L562.00 92.00 L567.00 102.00 L574.00 44.00 L580.00 112.00 L587.00 92.00 L604.00 92.00 C618.00 92.00 621.00 70.00 635.00 68.00 C651.00 67.00 661.00 92.00 670.00 92.00"/>
+              <g class="source-measurement" id="source-measurement" aria-label="PR measurement from P onset to QRS onset"><path d="M92 92v23H142V92"/><circle cx="92" cy="92" r="2.5"/><circle cx="142" cy="92" r="2.5"/><circle id="measurement-packet" cx="92" cy="115" r="3"/></g>
               <path class="ghost-trace" d="M22 213.00 L92.00 213.00 C98.00 213.00 97.00 201.00 106.00 199.00 C114.00 197.00 120.00 213.00 124.00 213.00 L142.00 213.00 L147.00 223.00 L154.00 165.00 L160.00 233.00 L167.00 213.00 L184.00 213.00 C198.00 213.00 201.00 191.00 215.00 189.00 C231.00 188.00 241.00 213.00 250.00 213.00 L302.00 213.00 C308.00 213.00 307.00 201.00 316.00 199.00 C324.00 197.00 330.00 213.00 334.00 213.00 L352.00 213.00 L357.00 223.00 L364.00 165.00 L370.00 233.00 L377.00 213.00 L394.00 213.00 C408.00 213.00 411.00 191.00 425.00 189.00 C441.00 188.00 451.00 213.00 460.00 213.00 L512.00 213.00 C518.00 213.00 517.00 201.00 526.00 199.00 C534.00 197.00 540.00 213.00 544.00 213.00 L562.00 213.00 L567.00 223.00 L574.00 165.00 L580.00 233.00 L587.00 213.00 L604.00 213.00 C618.00 213.00 621.00 191.00 635.00 189.00 C651.00 188.00 661.00 213.00 670.00 213.00"/>
               <rect id="pr-region" class="pr-region" x="46" y="167" width="96" height="73" rx="3"/>
               <g class="qrs-evidence"><rect x="139" y="161" width="31" height="80" rx="4"/><path d="M169 240h16"/><text x="192" y="247">QRS preserved</text></g>
@@ -128,10 +130,11 @@
             </g>
           </svg>
           <div class="construction-checks" aria-label="ECG construction checks"><span id="target-check"><i>·</i> PR target</span><span id="protect-check"><i>·</i> R–R + QRS</span><span id="answer-check"><i>·</i> Answer grounding</span><span class="feedback-tag" id="construction-feedback">Waveform checks → construction repair</span></div>
-          <div class="ecg-question" id="ecg-question" data-state="candidate"><div><span class="question-label">ECG question</span><strong>Which interval changed?</strong><p id="question-answer">Contrasting PR · matched R–R within each pair.</p></div><span class="question-state" id="question-state">Next candidates</span></div>
+          <div class="ecg-question" id="ecg-question" data-state="candidate"><div><span class="question-label">ECG question</span><strong>Which interval changed?</strong><p id="question-answer">PR contrasts at matched R–R; verification is pending.</p></div><span class="question-state" id="question-state">Awaiting checks</span></div>
           <div class="learning-route"><span id="admission-label">Candidate ECG Q/A</span><svg viewBox="0 0 300 22" aria-hidden="true"><path d="M0 11H293m-6-5 6 5-6 5"/><circle id="example-packet" cx="293" cy="11" r="4"/></svg><span>ECG learner</span></div>
         </div>
         <div class="agent-column">
+          <p class="zone-heading">Development loop</p>
           <div class="agent-state updated" id="agent-state">
             <div class="agent-heading"><span class="agent-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 17H8l3-7 3 13 4-18 4 12h7"/></svg></span><h3>ECG synthesis agent</h3><span id="agent-version">Retained</span></div>
             <dl class="agent-rules">
@@ -140,16 +143,21 @@
               <div id="sampling-rule" class="changed"><dt>Focus</dt><dd><s id="sampling-old">Weak ECG categories</s><strong id="sampling-value">Interval confusion</strong></dd></div>
             </dl>
           </div>
+          <div class="feedback-diagnosis" id="feedback-diagnosis"><span>Development feedback</span><div><strong>Interval confusion</strong><svg viewBox="0 0 38 16" aria-hidden="true"><path d="M1 8H35m-5-4 5 4-5 4"/><circle id="diagnosis-packet" cx="1" cy="8" r="2.5"/></svg><span>Contrast recipes</span></div></div>
           <div class="student-state">
-            <div><p class="student-label">ECG learner · same parent</p><svg class="branch-scene" viewBox="0 0 244 100" role="img" aria-label="Three candidate interventions are trained from the same parent and compared"><path d="M29 50H75M75 50C102 50 95 20 123 20H174M75 50H174M75 50C102 50 95 80 123 80H174"/><circle class="parent-dot" cx="29" cy="50" r="10"/><circle class="branch-node branch-a" cx="188" cy="20" r="13"/><circle class="branch-node branch-b selected" cx="188" cy="50" r="13"/><circle class="branch-node branch-c" cx="188" cy="80" r="13"/><text x="188" y="24">A</text><text x="188" y="54">B</text><text x="188" y="84">C</text></svg><p id="student-status">Retained recipe → next ECG batch</p></div>
-            <div class="learner-return active"><svg viewBox="0 0 45 203" aria-hidden="true"><path id="learner-return-path" d="M3 186C44 186 44 18 3 18m7-6-7 6 7 6"/><circle id="feedback-packet" r="4" cx="3" cy="18"/></svg><span>ECG error profile</span></div>
+            <div><p class="student-label">Same parent · matched training</p><svg class="branch-scene" viewBox="0 0 244 100" role="img" aria-label="Coverage, contrast and progression candidates share a parent and matched training; a separate development set selects the update"><path class="branch-stem" d="M29 50H75"/><path class="branch-route" d="M75 50C102 50 95 20 123 20H174"/><path class="branch-route selected" d="M75 50H174"/><path class="branch-route" d="M75 50C102 50 95 80 123 80H174"/><g class="branch-labels"><text x="122" y="14">Coverage</text><text x="122" y="44">Contrasts</text><text x="122" y="74">Progression</text></g><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="branch-packet" cx="29" cy="50" r="2.7"/><circle class="parent-dot" cx="29" cy="50" r="10"/><circle class="branch-node branch-a" cx="188" cy="20" r="13"/><circle class="branch-node branch-b selected" cx="188" cy="50" r="13"/><circle class="branch-node branch-c" cx="188" cy="80" r="13"/><text x="188" y="24">A</text><text x="188" y="54">B</text><text x="188" y="84">C</text></svg><p id="student-status">Retained learner → external evaluation</p></div>
+            <div class="learner-return"><svg viewBox="0 0 45 203" preserveAspectRatio="none" aria-hidden="true"><path id="learner-return-path" d="M3 186C44 186 44 18 3 18m7-6-7 6 7 6"/><circle id="feedback-packet" r="4" cx="3" cy="18"/></svg><span>Development feedback</span></div>
           </div>
         </div>
       </div>
-      <div class="demo-footer"><p id="phase-caption">The next batch contrasts PR at matched R–R. Each candidate is checked before use.</p><div class="demo-controls"><button id="play-toggle" type="button" aria-label="Play animation">Play</button><button id="previous-step" type="button" aria-label="Previous step">←</button><div class="step-buttons" aria-label="Animation steps"><button type="button" data-step-to="0" aria-label="Step 1: Measure and edit PR">1</button><button type="button" data-step-to="1" aria-label="Step 2: Preserve R–R and QRS">2</button><button type="button" data-step-to="2" aria-label="Step 3: Verify ECG evidence and answer">3</button><button type="button" data-step-to="3" aria-label="Step 4: Propose ECG teaching recipes">4</button><button type="button" data-step-to="4" aria-label="Step 5: Select a qualifying recipe">5</button><button type="button" data-step-to="5" aria-label="Step 6: Generate PR contrast pairs" aria-current="step">6</button></div><button id="next-step" type="button" aria-label="Next step">→</button></div></div>
+      <div class="evaluation-exit active" id="evaluation-exit" aria-label="Independent evaluation outside the development loop">
+        <div class="evaluation-route"><span>Retained learner</span><svg viewBox="0 0 40 18" aria-hidden="true"><path d="M1 9H37m-6-5 6 5-6 5"/><circle id="evaluation-packet" cx="37" cy="9" r="2.5"/></svg><strong>Independent evaluation</strong></div>
+        <p>7 benchmarks · MedXpert-ECG · LUDB</p><span class="evaluation-boundary">Held out from generation and selection</span>
+      </div>
+      <div class="demo-footer"><p id="phase-caption">Held-out ECG benchmarks assess generalization independently.</p><div class="demo-controls"><button id="play-toggle" type="button" aria-label="Play animation">Play</button><button id="previous-step" type="button" aria-label="Previous step">←</button><div class="step-buttons" aria-label="Animation steps"><button type="button" data-step-to="0" aria-label="Step 1: Define the PR measurement">1</button><button type="button" data-step-to="1" aria-label="Step 2: Construct the target and detect drift">2</button><button type="button" data-step-to="2" aria-label="Step 3: Preserve R–R and QRS">3</button><button type="button" data-step-to="3" aria-label="Step 4: Verify ECG evidence and answer">4</button><button type="button" data-step-to="4" aria-label="Step 5: Propose recipes from development feedback">5</button><button type="button" data-step-to="5" aria-label="Step 6: Compare matched candidates on development selection">6</button><button type="button" data-step-to="6" aria-label="Step 7: Construct the next unverified batch">7</button><button type="button" data-step-to="7" aria-label="Step 8: Assess independent external generalization" aria-current="step">8</button></div><span class="control-phase" id="control-phase" aria-label="Current animation step">8 / 8</span><button id="next-step" type="button" aria-label="Next step">→</button></div></div>
       <div class="animation-progress" role="progressbar" aria-label="Animation position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="animation-progress"></span></div>
     </div>
-    <p class="demo-note">Schematic ECGs · candidate selection and external benchmark evaluation use separate sets.</p>
+    <p class="demo-note">Schematic ECGs · feedback and selection use separate development sets.</p>
   </section>
 
 
@@ -157,7 +165,7 @@
   <section class="container findings-section" id="findings" aria-labelledby="findings-title">
     <h2 id="findings-title">What changes as the learner improves?</h2>
     <div class="insights">
-      <article class="teaching-insight"><h3>The preferred intervention changes.</h3><div class="teaching-path"><div><span>R1</span><strong>Reinforce</strong></div><i aria-hidden="true">→</i><div><span>R2</span><strong>Contrast</strong></div><i aria-hidden="true">→</i><div><span>R3</span><strong>Contrast</strong></div></div><p>Diagnose a weakness, then compare how to teach it.</p></article>
+      <article class="teaching-insight"><h3>The preferred intervention changes.</h3><div class="teaching-path"><div><span>R1</span><strong>Reinforce</strong></div><i aria-hidden="true">→</i><div><span>R2</span><strong>Contrast</strong></div><i aria-hidden="true">→</i><div><span>R3</span><strong>Contrast</strong></div></div><p>Development feedback proposes interventions; separate selection compares their utility.</p></article>
       <article class="transfer-insight"><h3>External gains diminish.</h3><div class="gain-bars" aria-label="Successive external S7 gains: R1 13.07, R2 3.01, R3 0.38 points"><div><span>R1</span><i style="--gain:100%"></i><strong>+13.07</strong></div><div><span>R2</span><i style="--gain:23.03%"></i><strong>+3.01</strong></div><div><span>R3</span><i style="--gain:2.91%"></i><strong>+0.38</strong></div></div><p>Seven-benchmark mean gain (points).</p></article>
     </div>
     <div class="headline-results"><div><strong>+21.47<span>pp</span></strong><span>Mean QA accuracy</span></div><div><strong>+9.77<span>points</span></strong><span>Mean classification F1</span></div><p>Qwen3.5-35B-A3B · three rounds<br> Seven benchmarks · reported R-A trajectory</p></div>
@@ -177,8 +185,8 @@
             <tr><th scope="row">CODE-15%</th><td>F1</td><td>30.20</td><td>38.80</td><td>41.50</td><td>41.00</td></tr>
             <tr class="aggregate"><th scope="row">S7</th><td>Equal-weight mean</td><td>30.15</td><td>43.22</td><td>46.23</td><td>46.61</td></tr>
           </tbody></table>
-        </div><p>Interventions are compared from the same parent on a separate selection set. Source: the paper’s main results and “Round-Wise Branch Selection and Data Composition.” These are observations from the reported setting.</p></div></details>
-    <details class="detail-block" id="method"><summary>Recorded waveform example and full method</summary><div class="detail-content"><p>The appendix PR example requests 300 ms and remeasures 298 ms, with heart rate 74.6 bpm. It lengthens the PQ segment and compensates in the TP segment to preserve the RR interval. These values follow the paper’s automatic measurement convention.</p><figure><a href="assets/case-pr.png" target="_blank" rel="noopener"><img src="assets/case-pr.png" width="1844" height="1060" alt="Recorded PR-prolongation example from the paper" loading="lazy"></a><figcaption>Paper appendix, Case 1. Click to inspect the original and edited ECGs.</figcaption></figure><figure><a href="assets/method.svg" target="_blank" rel="noopener"><img src="assets/method.svg" width="896" height="410" alt="ECG-RSI framework with construction and learner feedback loops" loading="lazy"></a><figcaption>Paper Fig. 1. Construction feedback repairs operators and prompts. Learner feedback proposes recipes; same-parent candidate comparisons select a model.</figcaption></figure></div></details>
+        </div><p>Interventions are compared from the same parent on a separate development selection set. External benchmarks remain held out from generation and selection. Source: the paper’s main results and “Round-Wise Branch Selection and Data Composition.” These are observations from the reported setting.</p></div></details>
+    <details class="detail-block" id="method"><summary>Recorded waveform example and full method</summary><div class="detail-content"><p>The appendix PR example requests 300 ms and remeasures 298 ms, with heart rate 74.6 bpm. It lengthens the PQ segment and compensates in the TP segment to preserve the RR interval. These values follow the paper’s automatic measurement convention.</p><figure><a href="assets/case-pr.png" target="_blank" rel="noopener"><img src="assets/case-pr.png" width="1844" height="1060" alt="Recorded PR-prolongation example from the paper" loading="lazy"></a><figcaption>Paper appendix, Case 1. Click to inspect the original and edited ECGs.</figcaption></figure><figure><a href="assets/method.svg" target="_blank" rel="noopener"><img src="assets/method.svg" width="896" height="410" alt="ECG-RSI framework with construction and learner feedback loops" loading="lazy"></a><figcaption>Paper Fig. 1. Construction feedback repairs operators and prompts. Development feedback proposes recipes; a separate development set selects a model from same-parent candidates.</figcaption></figure></div></details>
   </section>
 
   <section class="container resources-section" id="resources" aria-label="Resources">
