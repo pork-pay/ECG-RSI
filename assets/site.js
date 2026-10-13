@@ -59,6 +59,7 @@
   let lastTick = null;
   let request = null;
   let returnSize = "";
+  let returnLength = 0;
 
   // Symbolic ECG geometry: the P wave moves while QRS/T shapes remain intact.
   // R–R drift in the first attempt is repaired through TP compensation.
@@ -188,19 +189,22 @@
     const returnHeight = Math.max(50, returnBox.height);
     const sizeKey = `${returnWidth} ${returnHeight}`;
     if (sizeKey !== returnSize) {
+      const right = returnWidth - 3;
+      const top = 18;
+      const bottom = returnHeight - 18;
+      const radius = Math.min(8, (returnWidth - 6) / 2, (bottom - top) / 2);
       ui.returnSvg.setAttribute("viewBox", `0 0 ${returnWidth} ${returnHeight}`);
-      ui.returnPath.setAttribute("d", `M3 ${returnHeight - 18}C${returnWidth - 3} ${returnHeight - 18} ${returnWidth - 3} 18 3 18m4-4-4 4 4 4`);
+      ui.returnPath.setAttribute("d", `M3 ${bottom}H${right - radius}Q${right} ${bottom} ${right} ${bottom - radius}V${top + radius}Q${right} ${top} ${right - radius} ${top}H3`);
+      returnLength = ui.returnPath.getTotalLength();
       ui.feedbackPacket.setAttribute("r", "2.5");
       returnSize = sizeKey;
     }
     const travel = ease((p - 0.12) / 0.7);
-    // Cubic return path from learner to generator; position is deterministic.
-    const a = 1 - travel;
-    const packetX = a*a*a*3 + 3*a*a*travel*(returnWidth - 3) + 3*a*travel*travel*(returnWidth - 3) + travel*travel*travel*3;
-    const packetY = a*a*a*(returnHeight - 18) + 3*a*a*travel*(returnHeight - 18) + 3*a*travel*travel*18 + travel*travel*travel*18;
-    ui.feedbackPacket.setAttribute("cx", packetX.toFixed(3));
-    ui.feedbackPacket.setAttribute("cy", packetY.toFixed(3));
-    ui.feedbackPacket.style.opacity = step === 4 && p > 0.12 && p < 0.86 ? "1" : "0";
+    const feedbackPoint = ui.returnPath.getPointAtLength(returnLength * travel);
+    ui.feedbackPacket.setAttribute("cx", feedbackPoint.x.toFixed(3));
+    ui.feedbackPacket.setAttribute("cy", feedbackPoint.y.toFixed(3));
+    const tipClearance = returnLength * (1 - travel);
+    ui.feedbackPacket.style.opacity = step === 4 && p > 0.12 && p < 0.86 ? String(clamp((tipClearance - 8) / 8)) : "0";
     ui.evaluation.classList.toggle("active", step === 7);
     ui.evaluationPacket.setAttribute("cx", String(1 + 36 * ease((p - 0.12) / 0.62)));
     ui.evaluationPacket.style.opacity = step === 7 && p > 0.12 && p < 0.84 ? "1" : "0";
