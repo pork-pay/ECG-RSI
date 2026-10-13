@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="714" height="524" viewBox="0 0 714 524" role="img" aria-labelledby="title desc">
 <title id="title">ECG-RSI heart and evolution logo</title>
-<desc id="desc">A solid dark-red heart replaces the wrench in a deep muted-purple evolution loop, with a dark-red ECG waveform at its center.</desc>
+<desc id="desc">A burgundy heart and ECG waveform inside a purple evolution loop.</desc>
 <g id="evolution-loop" fill="#51406D">
   <path id="upper-left-arrow" d="M215 125 C273 91 341 61 405 41 L381 17 Q371 4 388 7 L500 38 Q511 43 498 50 L408 108 Q393 117 400 100 L407 79 C341 99 280 126 222 157 Z"/>
   <path id="upper-right-arc" d="M511 25 C604 18 657 53 687 92 C711 124 710 158 698 190 L662 190 C677 148 671 124 646 97 C613 64 564 54 512 59 L526 42 Z"/>
