@@ -2,7 +2,7 @@
 
 <p><img src="assets/zhejiang-university-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Zhejiang University</sub> &nbsp;&nbsp; <img src="assets/ant-group-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Ant Group</sub> &nbsp;&nbsp; <img src="assets/shanghai-ai-lab-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>Shanghai AI Lab</sub> &nbsp;&nbsp; <img src="assets/shanghai-jiao-tong-symbol.png" height="24" align="middle" alt="">&nbsp;<sub>SJTU</sub></p>
 
-<h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement<br>through Targeted Electrocardiogram Waveform Evolution</h1>
+<h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
 <p>Xiaoliang&nbsp;Wang<sup>1,2*</sup>, Zhuo&nbsp;Chen<sup>2*</sup>, Chuanyang&nbsp;Zheng<sup>2</sup>, Jiangwei&nbsp;Lao<sup>2</sup>, Quanbin&nbsp;Wang<sup>2</sup>,<br>
 Honglin&nbsp;Lin<sup>3,4</sup>, Jiajia&nbsp;Liu<sup>2</sup>, Zhihong&nbsp;Lu<sup>2</sup>, Hao&nbsp;Jin<sup>1</sup>, Jian&nbsp;Wang<sup>2</sup>, Lijun&nbsp;Wu<sup>2,3†</sup></p>
