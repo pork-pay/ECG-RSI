@@ -4,7 +4,7 @@
 
 <h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](papers/ecg-rsi.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](https://arxiv.org/pdf/2610.17718)
 [![Website](https://img.shields.io/badge/Website-ECG--RSI-625087.svg)](https://pork-pay.github.io/ECG-RSI/)
 [![GitHub stars](https://img.shields.io/github/stars/pork-pay/ECG-RSI?style=social)](https://github.com/pork-pay/ECG-RSI/stargazers)
 [![Benchmarks](https://img.shields.io/badge/Benchmarks-7-267F70.svg)](#results)
@@ -46,9 +46,9 @@ The two means give equal weight to each benchmark within the corresponding task 
 
 | Item | Status |
 |:--|:--|
-| Paper (PDF) | ✅ [Available](papers/ecg-rsi.pdf) |
+| Paper (PDF) | ✅ [Available](https://arxiv.org/pdf/2610.17718) |
 | Project page & interactive demo | ✅ [Available](https://pork-pay.github.io/ECG-RSI/) |
-| arXiv posting | 🔜 In progress |
+| arXiv | ✅ [2610.17718](https://arxiv.org/abs/2610.17718) |
 | Discovered programs | ⏳ Being prepared |
 | Full codebase | ⏳ Being prepared |
 | Reproduction scripts | ⏳ Being prepared |
@@ -60,10 +60,14 @@ Related project: [MedEvo](https://pork-pay.github.io/MedEvo/)
 
 ```bibtex
 @misc{wang2026ecgrsi,
-  title = {ECG-RSI: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution},
+  title = {{ECG-RSI}: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution},
   author = {Wang, Xiaoliang and Chen, Zhuo and Zheng, Chuanyang and Lao, Jiangwei and Wang, Quanbin and Lin, Honglin and Liu, Jiajia and Lu, Zhihong and Jin, Hao and Wang, Jian and Wu, Lijun},
   year = {2026},
-  url = {https://pork-pay.github.io/ECG-RSI/}
+  eprint = {2610.17718},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  doi = {10.48550/arXiv.2610.17718},
+  url = {https://arxiv.org/abs/2610.17718}
 }
 ```
 
