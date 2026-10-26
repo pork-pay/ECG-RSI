@@ -480,3 +480,6 @@ main > section:not(.evolution-section) :is(p, h2, h3, h4, summary) { font-family
 .hero.container { width: min(1076px, calc(100% - 64px)); }
 @media (max-width: 900px) { .hero.container { width: calc(100% - 48px); } }
 @media (max-width: 640px) { .hero.container { width: calc(100% - 34px); } }
+.hero .correspondence { margin: 7px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.hero .correspondence a { white-space: nowrap; }
+@media (max-width: 640px) { .hero .correspondence { font-size: 12px; } }
