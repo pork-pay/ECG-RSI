@@ -4,6 +4,10 @@
 
 <h1><img src="assets/ecg-rsi-mark.svg" height="28" align="middle" alt=""> ECG-RSI: Recursive Self-Improvement through<br>Targeted Electrocardiogram Waveform Evolution</h1>
 
+<p>Xiaoliang Wang, Zhuo Chen, Chuanyang Zheng, Jiangwei Lao, Quanbin Wang, Honglin Lin, Jiajia Liu, Zhihong Lu, Hao Jin, Jian Wang, Jinjie Gu, Lijun Wu</p>
+
+<p><strong>Correspondence:</strong> Lijun Wu · <a href="mailto:wlj554215@antgroup.com">wlj554215@antgroup.com</a></p>
+
 [![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b.svg)](https://arxiv.org/pdf/2610.17718)
 [![Website](https://img.shields.io/badge/Website-ECG--RSI-625087.svg)](https://pork-pay.github.io/ECG-RSI/)
 [![GitHub stars](https://img.shields.io/github/stars/pork-pay/ECG-RSI?style=social)](https://github.com/pork-pay/ECG-RSI/stargazers)
@@ -61,7 +65,7 @@ Related project: [MedEvo](https://pork-pay.github.io/MedEvo/)
 ```bibtex
 @misc{wang2026ecgrsi,
   title = {{ECG-RSI}: Recursive Self-Improvement through Targeted Electrocardiogram Waveform Evolution},
-  author = {Wang, Xiaoliang and Chen, Zhuo and Zheng, Chuanyang and Lao, Jiangwei and Wang, Quanbin and Lin, Honglin and Liu, Jiajia and Lu, Zhihong and Jin, Hao and Wang, Jian and Wu, Lijun},
+  author = {Wang, Xiaoliang and Chen, Zhuo and Zheng, Chuanyang and Lao, Jiangwei and Wang, Quanbin and Lin, Honglin and Liu, Jiajia and Lu, Zhihong and Jin, Hao and Wang, Jian and Gu, Jinjie and Wu, Lijun},
   year = {2026},
   eprint = {2610.17718},
   archivePrefix = {arXiv},
